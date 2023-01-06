@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [HideInInspector] public int RedScore = 0;
-    [HideInInspector] public int BlueScore = 0;
-    [SerializeField] private GameObject _ballPrefab;
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void Start()
+    public void ScoreDisplayer(int score, TMP_Text text)
     {
-        GameObject.Instantiate(_ballPrefab);
+        text.text = score.ToString();
     }
 }

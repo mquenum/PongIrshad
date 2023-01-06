@@ -9,6 +9,7 @@ public class LoseManager : MonoBehaviour
     public UnityEvent triggerEntered;
     [SerializeField] private bool _isRed;
     [SerializeField] private bool _isBlue;
+    [SerializeField] private GameManager _gameManager;
 
     [SerializeField] private TMP_Text _redScoreText;
     [SerializeField] private TMP_Text _blueScoreText;
@@ -23,26 +24,15 @@ public class LoseManager : MonoBehaviour
             if (_isRed)
             {
                 _blueScore++;
-                _blueScoreText.text = _blueScore.ToString();
+                _gameManager.ScoreDisplayer(_blueScore, _blueScoreText);
             }
             else if (_isBlue)
             {
                 _redScore++;
-                _redScoreText.text = _redScore.ToString();
+                _gameManager.ScoreDisplayer(_redScore, _redScoreText);
             }
-            Destroy(_ball);
         }
 
         triggerEntered.Invoke();
-    }
-
-    public int ReturnBlueScore(int blueScore)
-    {
-        return blueScore;
-    }
-
-    public int ReturnRedScore(int redScore)
-    {
-        return redScore;
     }
 }

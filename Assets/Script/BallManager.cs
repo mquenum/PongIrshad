@@ -21,7 +21,7 @@ public class BallManager : MonoBehaviour
             _direction = Vector3.right;
         }
 
-        _ball.AddForce(_direction * _speed, ForceMode.Impulse);
+        _ball.AddForce(_direction * _speed, ForceMode.VelocityChange);
         _ball.velocity = (Vector3.Normalize(_ball.velocity) * _speed);
     }
 }
