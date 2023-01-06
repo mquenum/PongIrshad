@@ -12,6 +12,7 @@ TagManager:
   - Wall
   - Red Score
   - Blue Score
+  - Pad
   layers:
   - Default
   - TransparentFX

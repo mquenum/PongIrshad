@@ -818,7 +818,7 @@ PrefabInstance:
     - target: {fileID: 2626780446350417257, guid: f79ab93d019794840b48c3af08ba4cfd,
         type: 3}
       propertyPath: m_TagString
-      value: Right Pad
+      value: Pad
       objectReference: {fileID: 0}
     - target: {fileID: 5000658325329784655, guid: f79ab93d019794840b48c3af08ba4cfd,
         type: 3}
@@ -1336,11 +1336,9 @@ MonoBehaviour:
   triggerEntered:
     m_PersistentCalls:
       m_Calls: []
-  _isRed: 1
-  _isBlue: 0
+  _leftPoint: 0
+  _rightPoint: 1
   _gameManager: {fileID: 1915601237}
-  _redScoreText: {fileID: 591772816}
-  _blueScoreText: {fileID: 1014002222}
 --- !u!1 &1159942412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,11 +1901,9 @@ MonoBehaviour:
   triggerEntered:
     m_PersistentCalls:
       m_Calls: []
-  _isRed: 0
-  _isBlue: 1
+  _leftPoint: 1
+  _rightPoint: 0
   _gameManager: {fileID: 1915601237}
-  _redScoreText: {fileID: 591772816}
-  _blueScoreText: {fileID: 1014002222}
 --- !u!1 &1691023677
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2069,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67a0634fce5ba248b4b01877b8bc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerLeft: {fileID: 1039958737}
+  _playerRight: {fileID: 603091429}
+  _padMoveForce: 10
+  _leftScoreText: {fileID: 591772816}
+  _rightScoreText: {fileID: 1014002222}
 --- !u!4 &1915601238
 Transform:
   m_ObjectHideFlags: 0
@@ -2178,7 +2179,7 @@ PrefabInstance:
     - target: {fileID: 2626780446350417257, guid: f79ab93d019794840b48c3af08ba4cfd,
         type: 3}
       propertyPath: m_TagString
-      value: Left Pad
+      value: Pad
       objectReference: {fileID: 0}
     - target: {fileID: 5000658325329784655, guid: f79ab93d019794840b48c3af08ba4cfd,
         type: 3}
@@ -2264,6 +2265,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303105220882398749, guid: fc3343bafe1606d43b986c03bf90e184,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303105220882398758, guid: fc3343bafe1606d43b986c03bf90e184,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303105220882398759, guid: fc3343bafe1606d43b986c03bf90e184,
+        type: 3}
+      propertyPath: _speed
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3343bafe1606d43b986c03bf90e184, type: 3}
